@@ -7,10 +7,17 @@ import { LoginComponent } from './Accounts/login/login.component';
 import { SignupComponent } from './Accounts/signup/signup.component';
 import { LayoutModule } from './app-main/layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignupComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,LayoutModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    LayoutModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

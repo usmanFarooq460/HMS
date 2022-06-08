@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
 
 @Component({
@@ -7,8 +8,16 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private service: LoginService) {}
-
+  loginForm: any;
+  constructor(private service: LoginService, private formBuilder: FormBuilder) {
+    this.loginForm = this.formBuilder.group({
+      seoTitle: ['', Validators.required],
+      pageTitle: ['', Validators.required],
+      metaTitle: ['', Validators.required],
+      keywords: ['', Validators.required],
+      description: ['', Validators.required],
+    });
+  }
   ngOnInit(): void {
     this.adminGetAll();
   }
