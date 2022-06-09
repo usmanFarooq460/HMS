@@ -11,15 +11,14 @@ export class LoginComponent implements OnInit {
   loginForm: any;
   constructor(private service: LoginService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
-      seoTitle: ['', Validators.required],
-      pageTitle: ['', Validators.required],
-      metaTitle: ['', Validators.required],
-      keywords: ['', Validators.required],
-      description: ['', Validators.required],
+      userName: ['', Validators.required],
+      pasword: ['', Validators.required],
     });
   }
   ngOnInit(): void {
     this.adminGetAll();
+    console.log("date , ",new Date().toLocaleString());
+      
   }
 
   adminGetAll() {
@@ -29,5 +28,10 @@ export class LoginComponent implements OnInit {
       },
       (err) => console.log('err: ', err)
     );
+  }
+
+  submit() {
+    console.log('Form Fields', this.loginForm);
+    console.log('Password Value', this.loginForm.value.pasword);
   }
 }
