@@ -1,8 +1,8 @@
-<div class="row">
-  <div class="border border-danger" [ngClass]="isLoggedIn == false ? 'col-12' : 'col-3'">
+<div class="row border border-danger">
+  <div class="border border-danger" [ngClass]="isLoggedIn == false ? 'col-12' : 'col-2'">
     <app-side-bar *ngIf="isLoggedIn"></app-side-bar>
   </div>
-  <div class="border border-danger" [ngClass]="isLoggedIn == false ? 'col-12' : 'col-9'">
+  <div class="border border-danger" [ngClass]="isLoggedIn == false ? 'col-12' : 'col-10'">
     <top-bar *ngIf="isLoggedIn"></top-bar>
     <router-outlet></router-outlet>
   </div>
