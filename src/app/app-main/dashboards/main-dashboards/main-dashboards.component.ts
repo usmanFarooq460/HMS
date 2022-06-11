@@ -15,10 +15,11 @@ export class MainDashboardsComponent implements OnInit {
   }
 
   checkingIsLoggedIn() {
+    console.log('chcking ofr logged in in dashboard');
+
     this.isLoggedIn =
       localStorage.getItem('isLoggedIn') == 'true' ? true : false;
-    if (this.isLoggedIn == true) {
-    } else {
+    if (this.isLoggedIn == false) {
       this.router.navigate(['/accounts/login']);
     }
   }

@@ -17,6 +17,7 @@ export class MainLayoutDesignComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.checkingRouteChange();
+    this.isLoggedIn == false ? this.router.navigate(['/accounts/login']) : '';
   }
   checkingRouteChange() {
     this.router.events.subscribe((event: Event) => {
