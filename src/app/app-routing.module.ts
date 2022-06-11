@@ -1,8 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from "./Accounts/login/login.component"
 
 const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./app-main/dashboards/dashboards.module').then(
+        (m) => m.DashboardsModule
+      ),
+  },
+  {
+    path: 'accounts',
+    loadChildren: () =>
+      import('./Accounts/auth/auth.module').then((m) => m.AuthModule),
+  },
   {
     path: 'Pharmacy',
     loadChildren: () =>
@@ -10,7 +21,6 @@ const routes: Routes = [
         (m) => m.PharmacyModule
       ),
   },
-  { path:"",component: LoginComponent}
 ];
 
 @NgModule({
