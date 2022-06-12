@@ -1,14 +1,25 @@
 @import "./../../shared/shared_scss_varables.scss";
 
 .main-top {
+  // width: 100px;
   background-color: $themeBackgroundColor;
   color: $text_color_on_Background;
 }
 .search {
+  display: 100%;
   .input {
-    // background-color;
-    .search-input{
-      background-color: aqua;
+    input{
+      border-radius:5px;
+      &:focus{
+        outline: none;
+        background-color: beige;
+      }
+    }
+    input[type=text]{
+      width: 100%;
+      padding: 5px 10px;
+      border: none;
+      box-sizing: border-box;
     }
   }
 }
