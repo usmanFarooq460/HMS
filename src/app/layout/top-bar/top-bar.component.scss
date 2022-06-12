@@ -1,7 +1,6 @@
 @import "./../../shared/shared_scss_varables.scss";
 
 .main-top {
-  // width: 100px;
   background-color: $themeBackgroundColor;
   color: $text_color_on_Background;
 }
@@ -23,3 +22,21 @@
     }
   }
 }
+
+.Icons{
+  color: white;
+  font-size: 27px;
+  margin-top: -5px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.user-area{
+  margin-top: -4px;
+  button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+}
+

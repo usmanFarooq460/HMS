@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~bootstrap/dist/css/bootstrap.css";
-
+$font-path: "../../../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
 
 .zero-margin-padding{
     margin: 0;
     padding: 0;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
 }
