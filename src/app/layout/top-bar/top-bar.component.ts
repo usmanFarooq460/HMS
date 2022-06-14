@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
 
@@ -8,11 +9,18 @@ import { DOCUMENT } from "@angular/common";
 })
 export class TopBarComponent implements OnInit {
   element: any;
-  constructor(@Inject(DOCUMENT) private document: any) {}
+  constructor(@Inject(DOCUMENT) private document: any,private router:Router) {}
 
   ngOnInit(): void {
     this.element = document.documentElement;
   }
+
+  logOut() {
+    console.log('logging me out');
+    this.router.navigate(['/accounts/login']);
+    localStorage.removeItem('isLoggedIn');
+  }
+
 
   fullscreen() {
     document.body.classList.toggle('fullscreen-enable');
