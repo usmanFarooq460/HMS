@@ -1,18 +1,11 @@
-body {
-  background-image: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: "Open Sans", sans-serif;
-  color: #333333;
-}
+@import "./../../../shared/shared_scss_varables.scss";
 
 .main-page {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid green;
   height: 100vh;
 }
 
@@ -21,13 +14,14 @@ body {
   width: 75%;
   background: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex: 1 1 100%;
   align-items: stretch;
   justify-content: space-between;
+  justify-content: center;
   box-shadow: 0 0 20px 6px #090b6f85;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 @media (max-width: 800px) {
@@ -62,7 +56,8 @@ body {
   box-sizing: border-box;
 }
 .box-form .left .overlay h1 {
-  font-size: 10vmax;
+  font-size: 5vmax;
+  // font-size: 10vmax;
   line-height: 1;
   font-weight: 900;
   margin-top: 40px;
@@ -130,16 +125,22 @@ body {
   width: auto;
 }
 .box-form .right button {
-  // float: right;
   color: #fff;
   font-size: 16px;
   padding: 12px 35px;
-  border-radius: 50px;
+  border-radius: 5px;
   display: inline-block;
   border: 0;
   outline: 0;
-  box-shadow: 0px 4px 20px 0px #49c628a6;
-  background-image: linear-gradient(135deg, #70f570 10%, #49c628 100%);
+  box-shadow: 0px 4px 20px 0px #0f3a99a6;
+  background-color: $themeBackgroundColor;
+  transition-duration: 0.3s;
+  &:hover,&:focus{
+    background-color: White;
+    border: 1px solid $themeBackgroundColor;
+    color: $themeBackgroundColor;
+    font-weight: 600;
+  }
 }
 
 label {

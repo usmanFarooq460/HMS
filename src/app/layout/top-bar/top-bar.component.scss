@@ -1,17 +1,10 @@
 @import "./../../shared/shared_scss_varables.scss";
 
 .main-top {
-  background-color: $themeBackgroundColor;
-  color: $text_color_on_Background;
+  // background-color: $themeBackgroundColor;
+  background-color: rgb(47, 47, 47);
+  color: white;
   padding: 15px;
-}
-
-.logo{
-  height: 40px;
-  width: 200px;
-  background-color: green;
-  background-image: url("./../../../assets/images/download.png");
-  background-size: cover;
 }
 
 .search {

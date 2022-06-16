@@ -1,11 +1,9 @@
-<div class="row overflow-hidden">
-  <div class="col-12">
-    <top-bar *ngIf="isLoggedIn"></top-bar>
-  </div>
-  <div class="overflow-hidden" [ngClass]="isLoggedIn == false ? 'col-12' : 'col-2'">
+<div class="main-page-app">
+  <div class="" [ngClass]="isLoggedIn?'side-bar':''">
     <app-side-bar *ngIf="isLoggedIn"></app-side-bar>
   </div>
-  <div class="main-page overflow-hidden"  [ngClass]="isLoggedIn == false ? 'col-12' : 'col-10'">
+  <div class="" [ngClass]="isLoggedIn?'router-page':'router-page-100-width'">
+    <top-bar *ngIf="isLoggedIn"></top-bar>
     <router-outlet></router-outlet>
   </div>
 </div>

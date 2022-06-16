@@ -1,4 +1,36 @@
 @import "./../../shared/shared_scss_varables.scss";
-.side-bar-main{
-    background-color: $themeBackgroundColor;
+
+.side-bar-main {
+  background-color: $themeBackgroundColor;
+  color: white;
+  height: 100vh;
+}
+.logo-wrape {
+  padding: 15px 2px;
+}
+.logo {
+  height: 40px;
+  width: 200px;
+  background-image: url("./../../../assets/images/download.png");
+  background-size: cover;
+}
+.links-wrape{
+    // border: 1px solid green;
+}
+.single-link{
+    // border: 1px solid whitesmoke;
+    margin: 5px auto;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 5px;
+    cursor: pointer;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.icon{
+    padding-right:10px ;
 }

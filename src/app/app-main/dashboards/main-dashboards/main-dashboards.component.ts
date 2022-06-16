@@ -25,7 +25,7 @@ export class MainDashboardsComponent implements OnInit {
   }
 
   logOut() {
-    console.log('logging me out');
+    
     this.router.navigate(['/accounts/login']);
     localStorage.removeItem('isLoggedIn');
   }

@@ -1,8 +1,27 @@
-<p>side-bar works!</p>
-<div class="row">
-    <div class="col-md-12">
-        <div class="side-bar-main">
-            
+<div class="side-bar-main">
+    <div class="logo-wrape">
+        <div class="logo">
+        </div>
+    </div>
+
+    <div class="links-wrape">
+        <div class="link">
+            <a  (click)="NavigateToSlectedRoute('/')" class="single-link">
+                <div class="icon"> <i class="fa fa-user"></i></div>
+                <div class="label">main Dasboard</div>
+            </a>
+        </div>
+         <div class="link">
+            <a  (click)="NavigateToSlectedRoute('/Pharmacy/main')" class="single-link">
+                <div class="icon"> <i class="fa fa-user"></i></div>
+                <div class="label">main Pharmacy</div>
+            </a>
+        </div>  
+        <div class="link" >
+            <a  class="single-link" (click)="NavigateToSlectedRoute('/accounts/login')">
+                <div class="icon"> <i class="fa fa-user"></i></div>
+                <div class="label">Log out</div>
+            </a>
         </div>
     </div>
 </div>
